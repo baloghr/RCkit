@@ -1,0 +1,117 @@
+
+(rules PCB bakalar_rc_obvod_typ_5_ver_2
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 2544)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.4)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:400_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_500:400_um"
+    (shape
+      (circle F.Cu 500.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 500.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
+  )
+  (via 
+    "Via[0-1]_500:400_um" "Via[0-1]_500:400_um" default
+  )
+  (via 
+    "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_500:400_um-kicad_default" "Via[0-1]_500:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:400_um-FEI" "Via[0-1]_600:400_um" FEI
+  )
+  (via 
+    "Via[0-1]_500:400_um-FEI" "Via[0-1]_500:400_um" FEI
+  )
+  (via_rule
+    default "Via[0-1]_500:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:400_um-kicad_default"
+  )
+  (via_rule
+    FEI "Via[0-1]_500:400_um-FEI"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(MUX2-Pad5)" "Net-(MUX2-Pad4)" "Net-(MUX2-Pad3)" "Net-(MUX2-Pad2)" "Net-(MUX2-Pad1)" "Net-(MUX3-Pad15)" "Net-(MUX3-Pad11)" "Net-(MUX3-Pad5)"
+    "Net-(MUX3-Pad4)" "Net-(MUX3-Pad3)" "Net-(MUX3-Pad2)" "Net-(MUX3-Pad1)" "/1(Tx)" "/0(Rx)" /Reset /2
+    "/3(**)" "Net-(P2-Pad1)" "Net-(P2-Pad2)" "Net-(P2-Pad3)" /A7 /A3 /A1 /A0
+    /AREF "Net-(P2-Pad14)" "/13(SCK)" "Net-(P3-Pad1)" "Net-(P4-Pad1)" "Net-(P5-Pad1)" "Net-(P6-Pad1)" "Net-(U1-Pad6)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class FEI
+    GNDD A2 A6 D8 D7 A5 A4 D4
+    D5 D6 "Net-(C4-Pad1)" "Net-(C5-Pad1)" "JP1_OUT_2" "JP1_OUT_1" +5V "Net-(MUX1-Pad15)"
+    "Net-(MUX1-Pad14)" "Net-(MUX1-Pad12)" "Net-(MUX1-Pad11)" "Net-(MUX1-Pad5)" "Net-(MUX1-Pad4)" "Net-(MUX1-Pad2)" "Net-(MUX1-Pad1)" "Net-(MUX2-Pad15)"
+    "Net-(MUX2-Pad12)" D9 D10 D11 D12 "Net-(C6-Pad1)"
+    (clearance_class FEI)
+    (via_rule FEI)
+    (rule
+      (width 350.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
