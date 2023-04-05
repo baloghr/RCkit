@@ -7,6 +7,8 @@ It is a simple extension board (shield) for Arduino Nano, but connectible also t
 
 ![3D model](https://github.com/baloghr/RCkit/blob/main/doc/3DmodelRCkit.png "3D model of the board")
 
+Initial design was done by students András Blahó and Filip Brhlík during their diploma projects. 
+
 More information can be found in the following paper:
 
 Žáková, Katarína and Richard Balogh. "Control Engineering Home Learning Kit." IFAC-PapersOnLine, vol. 55, no. 4, 1 Jan. 2022, pp. 310-5, doi:10.1016/j.ifacol.2022.06.051.
