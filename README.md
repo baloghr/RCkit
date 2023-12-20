@@ -16,3 +16,6 @@ More information can be found in the following paper:
 The paper is available at the https://www.sciencedirect.com/science/article/pii/S2405896322003664
 
 ![Experiment](https://github.com/baloghr/RCkit/blob/main/doc/Experiment1RCkit.png "An example experiment with the board.")
+
+
+See also a ![configuration diagram of the system[(https://github.com/baloghr/RCkit/blob/main/doc/RCkit-configuration.pdf)
