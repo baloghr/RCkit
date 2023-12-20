@@ -18,4 +18,4 @@ The paper is available at the https://www.sciencedirect.com/science/article/pii/
 ![Experiment](https://github.com/baloghr/RCkit/blob/main/doc/Experiment1RCkit.png "An example experiment with the board.")
 
 
-See also a ![configuration diagram of the system[(https://github.com/baloghr/RCkit/blob/main/doc/RCkit-configuration.pdf)
+See also a ![configuration diagram of the system](https://github.com/baloghr/RCkit/blob/main/doc/RCkit-configuration.pdf)
